@@ -6,7 +6,10 @@ function App(props) {
 
   const lists = props.store.lists.map((list) =>
       
-      <List id={list.id} header={list.header} cardIds={list.cardIds} allCards={props.store.allCards} />
+      <List key={list.id} 
+            header={list.header} 
+            cardIds={list.cardIds} 
+            allCards={props.store.allCards} />
   );
 
   return (

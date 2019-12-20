@@ -1,15 +1,23 @@
 import React from 'react';
 import './Card.css';
 
-function Card(props) {
+class CardClass extends React.Component {
 
-    return (
-        <div className='Card' key={props.id}>
-            <button type="button">delete</button>
-            <h3>{props.title}</h3>
-            <p>{props.content}</p>
-        </div>
-    );
+    static defaultProps = {
+        title: 'New Card',
+        content: 'Put your activities here.'
+    };
+
+    render() {
+ 
+        return (
+            <div className='Card'>
+                <button type="button">delete</button>
+                <h3>{this.props.title}</h3>
+                <p>{this.props.content}</p>
+            </div>
+        );
+    }
 }
 
-export default Card;
+export default CardClass;

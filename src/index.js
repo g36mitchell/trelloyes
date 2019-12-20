@@ -5,5 +5,5 @@ import App from './App';
 import STORE from './store.js';
 
 
-ReactDOM.render(<App store={STORE} application="Trelloyes!" />, document.getElementById('root'));
-
+ReactDOM.render(<App store={STORE} application="Trelloyes!" />, 
+                document.getElementById('root'));
